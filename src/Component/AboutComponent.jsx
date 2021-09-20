@@ -14,7 +14,7 @@ const MainTitle = styled.div`
     font-weight: bold;
     font-size: 35px;
     text-decoration: underline;
-    margin: 20px;
+    margin: 5vh;
     position: relative;
     left: 20px;
 `;

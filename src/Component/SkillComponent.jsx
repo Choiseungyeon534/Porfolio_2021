@@ -14,7 +14,7 @@ const MainTitle = styled.div`
     font-weight: bold;
     font-size: 35px;
     text-decoration: underline;
-    margin: 40px;
+    margin: 5vh;
 `;
 
 const SubTitle = styled.div`
@@ -38,6 +38,10 @@ const Contentmini = styled.div`
     margin: 10px;
     align-items: center;
     border-radius: 10px;
+    &:hover {
+        transform: scale(1.01);
+    }
+    box-shadow: 5px 5px;
 `;
 
 const Text = styled.div`
