@@ -8,7 +8,7 @@ const Main = styled.div`
   background-size : cover;
   `;
 
-  const Header = styled.div`
+const Header = styled.div`
   height:92px;
   position:fixed;
   width:100%;
@@ -25,6 +25,7 @@ const Portfolio = styled.div`
   left: 121px;
   font-size: 25px;
   font-family: serif;
+  font-weight: bold;
 `;
 const Menu = styled.div`
   width: 50%;
@@ -48,10 +49,11 @@ const Content = styled.div`
  justify-content: center;
  height: 90%;
  font-family: fantasy;
+ font-weight: bold;
 `;
 const Title = styled.div`
   font-size:50px;
-  color:white;
+  color: white;
 `;
 const Introduction = styled.div`
   padding-top: 70px;
@@ -68,7 +70,7 @@ const MainComponent = () => {
 
   return(
         <Main id="Main">
-            <Header>
+            <Header id="header">
               <Navi>
                   <Portfolio>BBoo's Portfolio</Portfolio>
                   <Menu>
@@ -80,13 +82,14 @@ const MainComponent = () => {
               </Navi>
             </Header>
             <Content>
-              <Title> - 최승연 - </Title>
+              <Title> ㅡ 최승연 ㅡ </Title>
               <Title> 웹 개발자 포트폴리오</Title>
               <Introduction> 
                 <IntDiv>안녕하세요. </IntDiv>
                 <IntDiv>배우는 걸 좋아하는 프론트 엔드 개발자입니다.</IntDiv> 
               </Introduction>
             </Content>
+            
         </Main>
     );
 }

@@ -1,20 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import AboutComponent from './Component/AboutComponent';
 import MainComponent from './Component/MainComponent';
+import SkillComponent from './Component/SkillComponent';
 
 const Background = styled.div`
   background-color:red;
   height:9000px;
 `;
 
-const About = styled.div`
-  height:300px;
-  background-color:yellow;
-`;
-const Skill = styled.div`
-  height:300px;
-  background-color:black;
-`;
+
 const Project = styled.div`
   height:300px;
   background-color:violet;
@@ -26,16 +21,34 @@ const Careers = styled.div`
 
 
 const App = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  function logit() {
+    setScrollY(window.pageYOffset);
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+
+    if(scrollY > 0) {
+      document.getElementById("header").style.background = 'black';
+    } else {
+      document.getElementById("header").style.background = 'none';
+    }
+  
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
 
   return(
     <Background>
       <MainComponent />
-      <About>
-          about뿌니
-      </About>
-      <Skill>
-        Skills
-      </Skill>
+      <AboutComponent/>
+      <SkillComponent/>
       <Project>
         프로젝트
       </Project>
