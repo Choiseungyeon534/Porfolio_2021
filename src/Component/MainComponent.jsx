@@ -78,8 +78,8 @@ const MainComponent = () => {
                   <Menu>
                     <Span>about me</Span>
                     <Span>skills</Span>
-                    <Span>Project</Span>
-                    <Span>careers</Span>
+                    <Span>project</Span>
+                    <Span>archiving</Span>
                   </Menu>
               </Navi>
             </Header>

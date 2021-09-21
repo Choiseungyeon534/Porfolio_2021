@@ -4,7 +4,7 @@ import { BirthIcon, EmailIcon, HomeIcon, PhoneIcon, SchoolIcon, UserIcon } from 
 
 
 const About = styled.div`
-  height:400px;
+  height:50vh;
   background-color:#FFFF24;
   display: flex;
   flex-direction: column;

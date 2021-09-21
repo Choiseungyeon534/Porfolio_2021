@@ -4,15 +4,21 @@ import AboutComponent from './Component/AboutComponent';
 import MainComponent from './Component/MainComponent';
 import SkillComponent from './Component/SkillComponent';
 import ProjectComponent from './Component/ProjectComponent';
+import ArchivingComponent from './Component/ArchivingComponent';
 
 const Background = styled.div`
-  background-color:red;
-  height:9000px;
+  background-color:black;
+  height:4000px;
 `;
 
-const Careers = styled.div`
-  height:300px;
-  background-color:white;
+const Footer = styled.div`
+  background-color: black;
+  height: 90px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
 `;
 
 
@@ -42,16 +48,18 @@ const App = () => {
       window.removeEventListener("scroll", logit);
     };
   });
-
+  console.log(scrollY)
   return(
+    
     <Background>
       <MainComponent />
       <AboutComponent/>
       <SkillComponent/>
       <ProjectComponent/>
-      <Careers>
-        career
-      </Careers>
+      <ArchivingComponent/>
+      <Footer>
+        <div>ⓒ2021.Choi Seung Yeon.All rights reserved.</div>
+      </Footer>
     </Background>
   );
 }
