@@ -8,7 +8,7 @@ import ArchivingComponent from './Component/ArchivingComponent';
 
 const Background = styled.div`
   background-color:black;
-  height:4000px;
+  height:3700px;
 `;
 
 const Footer = styled.div`
@@ -52,7 +52,7 @@ const App = () => {
   return(
     
     <Background>
-      <MainComponent />
+      <MainComponent setScrollY={setScrollY} />
       <AboutComponent/>
       <SkillComponent/>
       <ProjectComponent/>

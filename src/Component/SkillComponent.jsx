@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Skill = styled.div`
-    height:160vh;
+    height:1200px;
     background-color:cyan;
     display: flex;
     flex-direction: column;

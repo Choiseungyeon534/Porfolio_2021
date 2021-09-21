@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SimpleImageSlider from "react-simple-image-slider";
 
 const Project = styled.div`
-    height:150vh;
+    height:1000px;
     display: flex;
     flex-direction: column;
     align-items: center;

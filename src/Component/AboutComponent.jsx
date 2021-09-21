@@ -4,8 +4,8 @@ import { BirthIcon, EmailIcon, HomeIcon, PhoneIcon, SchoolIcon, UserIcon } from 
 
 
 const About = styled.div`
-  height:50vh;
-  background-color:#FFFF24;
+  height:360px;
+  background-color:#F9C51D;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,6 +42,10 @@ const ContentTitle = styled.div`
 const Text = styled.div`
 
 `;
+const BIGSPAN = styled.span`
+  font-weight: 700;
+  font-size: 1.25rem;
+`;
 
 
 
@@ -53,7 +57,7 @@ const AboutComponent = () => {
             <SubTitle>
                 <UserIcon width="40" height="40" />
                 <Content>
-                    <ContentTitle>이름</ContentTitle>
+                    <ContentTitle><BIGSPAN>이름</BIGSPAN></ContentTitle>
                     <Text>최승연</Text>
                 </Content>
                 <BirthIcon width="40" height="40"/>
