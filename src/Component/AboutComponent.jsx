@@ -1,9 +1,10 @@
-import React ,{useEffect, useState} from "react";
+import React from "react";
 import styled from "styled-components";
+import { BirthIcon, EmailIcon, HomeIcon, PhoneIcon, SchoolIcon, UserIcon } from "../utils/icon";
 
 
 const About = styled.div`
-  height:300px;
+  height:400px;
   background-color:#FFFF24;
   display: flex;
   flex-direction: column;
@@ -50,34 +51,34 @@ const AboutComponent = () => {
         <About >
             <MainTitle>ABOUT ME</MainTitle>
             <SubTitle>
-                <img className="" alt="" src="user.png"/>
+                <UserIcon width="40" height="40" />
                 <Content>
                     <ContentTitle>이름</ContentTitle>
                     <Text>최승연</Text>
                 </Content>
-                <img className="" alt="" src="document.png"/>
+                <BirthIcon width="40" height="40"/>
                 <Content>
                     <ContentTitle>생년월일</ContentTitle>
                     <Text>96.09.17</Text>
                 </Content>
-                <img className="" alt="" src="placeholder.png"/>
+                <HomeIcon width="40" height="40"/>
                 <Content>
                     <ContentTitle>주소지</ContentTitle>
                     <Text>경기도 이천시</Text>
                 </Content>
             </SubTitle>
             <SubTitle>
-                <img className="" alt="" src="smartphone.png"/>
+                <PhoneIcon width="40" height="40"/>
                 <Content>
                     <ContentTitle>연락처</ContentTitle>
                     <Text>010-5032-4709</Text>
                 </Content>
-                <img className="" alt="" src="email.png"/>
+                <EmailIcon width="40" height="40"/>
                 <Content>
                     <ContentTitle>이메일</ContentTitle>
                     <Text>tmddus4709@gmail.com</Text>
                 </Content>
-                <img className="" alt="" src="pencil.png"/>
+                <SchoolIcon width="40" height="40"/>
                 <Content>
                     <ContentTitle>학력</ContentTitle>
                     <Text>한경대학교</Text>

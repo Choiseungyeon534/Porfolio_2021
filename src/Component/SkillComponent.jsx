@@ -1,9 +1,8 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import styled from "styled-components";
-import '../SkillComponent.css';
 
 const Skill = styled.div`
-    height:1200px;
+    height:160vh;
     background-color:cyan;
     display: flex;
     flex-direction: column;
@@ -19,13 +18,9 @@ const MainTitle = styled.div`
 
 const SubTitle = styled.div`
     display: flex;
-    
 `;
 
 const Content = styled.div`
-    
-    
-    
     display: flex;
     flex-direction: column;
 `;
@@ -34,14 +29,15 @@ const Contentmini = styled.div`
     display: flex;
     flex-direction: column;
     width: 50vh;
+    padding-bottom: 3vh;
     background-color: white;
-    margin: 10px;
+    margin: 3vh;
     align-items: center;
     border-radius: 10px;
     &:hover {
         transform: scale(1.01);
     }
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px 5px #353535 ;
 `;
 
 const Text = styled.div`
@@ -57,41 +53,40 @@ const SkillComponent = () => {
         <Skill>
            <MainTitle>Skills</MainTitle>
             <SubTitle>
-                
                 <Content>
                     <Contentmini>
                         <Text>Back-end</Text>
-                        <img className="image" src="spring.png" ></img>
-                        <img className="image" src="nodejs.png"></img>
+                        <img alt="spring" height="100px" width="200px" src="spring.png" style={{marginBottom:30}}></img>
+                        <img alt="nodejs" height="100px" width="300px" src="nodejs.png" style={{marginBottom:30}}></img>
                     </Contentmini>
                     <Contentmini>
                         <Text>Version Control</Text>
-                        <img className="image" src="git.png"></img>
-                        <img className="image" src="github.png"></img>
+                        <img alt="git" height="200px" width ="200px" src="git.png" style={{marginBottom:30}}></img>
+                        <img alt="github" height="150px" width ="250px" src="github.png" style={{marginBottom:30}}></img>
                     </Contentmini>
                 </Content>
                 <Content>
 
                     <Contentmini>
                         <Text>Front-end</Text>
-                        <img className="image" src="html.png"></img>
-                        <img className="image" src="sass.png"></img>
-                        <img className="image" src="react.png"></img>
-                        <img className="image" src="jquery.png"></img>
+                        <img alt="html" height="150px" width ="300px" src="html.png" style={{marginBottom:30}}></img>
+                        <img alt="sass" height="200px" width ="250px" src="sass.png" style={{marginBottom:30}}></img>
+                        <img alt="react" height="150px" width ="280px" src="react.png" style={{marginBottom:30}}></img>
+                        <img alt="jquery" height="215px" width ="250px" src="jquery.png" style={{marginBottom:30}}></img>
                     </Contentmini>
                 </Content>
                 <Content>
                     <Contentmini>
                         <Text>Database</Text>
-                        <img className="image" src="oracle.png"></img>
-                        <img className="image" src="mysql.png"></img>
-                        <img className="image" src="mongo db.png"></img>
+                        <img alt="oracle" height="150px" width ="150px" src="oracle.png" ></img>
+                        <img alt="mysql" height="150px" width ="150px" src="mysql.png" ></img>
+                        <img alt="mongo" height="100px" width ="150px" src="mongo db.png" style={{marginBottom:10}}></img>
                     </Contentmini>
                     <Contentmini>
                         <Text>Certificate</Text>
-                        <img className="image" src="qnet.JPG"></img>
-                        <img className="image" src="adsp.JPG"></img>
-                        <img className="image" src="sqld.JPG"></img>
+                        <img alt="qnet" height="70px" width ="250px" src="qnet.JPG" style={{marginBottom:20}}></img>
+                        <img alt="adsp" height="70px" width ="150px" src="adsp.JPG" style={{marginBottom:20}}></img>
+                        <img alt="sqld" height="70px" width ="150px" src="sqld.JPG" style={{marginBottom:10}}></img>
                     </Contentmini>
                 </Content>
                 

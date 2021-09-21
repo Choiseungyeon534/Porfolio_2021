@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Main = styled.div`
@@ -12,6 +12,7 @@ const Header = styled.div`
   height:92px;
   position:fixed;
   width:100%;
+  z-index:5;
 `;
 const Navi = styled.div`
   display:flex;
@@ -26,6 +27,7 @@ const Portfolio = styled.div`
   font-size: 25px;
   font-family: serif;
   font-weight: bold;
+  
 `;
 const Menu = styled.div`
   width: 50%;
