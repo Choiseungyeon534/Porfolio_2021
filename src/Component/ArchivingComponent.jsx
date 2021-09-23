@@ -44,11 +44,12 @@ const ContentTitle = styled.div`
 
 
 const ArchivingComponent = () => {
+    
     return(
         <Archive>
             <MainTitle>ARCHIVING</MainTitle>
             <SubTitle>
-                <Content>
+            <Content>
                     <ContentTitle>GitHub</ContentTitle>
                     <a href="https://github.com/Choiseungyeon534">https://github.com/Choiseungyeon534</a>
                     <div>: 소스 코드 저장소입니다.</div>
@@ -68,9 +69,12 @@ const ArchivingComponent = () => {
                     <div>: 백준 알고리즘 랭킹 </div>
                     <div> - GOLD </div>
                 </Content>
+
             </SubTitle>
         </Archive>
     );
 }
+
+
 
 export default ArchivingComponent;

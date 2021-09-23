@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BirthIcon, EmailIcon, HomeIcon, PhoneIcon, SchoolIcon, UserIcon } from "../utils/icon";
+import ShowIcon from "./ShowIcon";
 
 
 const About = styled.div`
@@ -35,58 +35,46 @@ const Content = styled.div`
     left: 10px;
 `;
 
-const ContentTitle = styled.div`
-
-`;
-
-const Text = styled.div`
-
-`;
 const BIGSPAN = styled.span`
   font-weight: 700;
   font-size: 1.25rem;
 `;
 
 
-
+const title = ["이름","생년월일","주소"]
+const title1 = ["연락처","이메일","학력"]
+const content = ["최승연","96.09.17","경기도 이천시"]
+const content1 = ["010-5032-4709","tmddus4709@gmail.com","한경대학교"]
 const AboutComponent = () => {
 
     return(
-        <About >
+        <About>
             <MainTitle>ABOUT ME</MainTitle>
             <SubTitle>
-                <UserIcon width="40" height="40" />
-                <Content>
-                    <ContentTitle><BIGSPAN>이름</BIGSPAN></ContentTitle>
-                    <Text>최승연</Text>
-                </Content>
-                <BirthIcon width="40" height="40"/>
-                <Content>
-                    <ContentTitle>생년월일</ContentTitle>
-                    <Text>96.09.17</Text>
-                </Content>
-                <HomeIcon width="40" height="40"/>
-                <Content>
-                    <ContentTitle>주소지</ContentTitle>
-                    <Text>경기도 이천시</Text>
-                </Content>
+                {title.map((value,index) => {
+                    return(
+                        <>
+                            <ShowIcon Index={index} />
+                            <Content>
+                                <div><BIGSPAN>{value}</BIGSPAN></div>
+                                <div>{content[index]}</div>
+                            </Content>
+                        </>
+                    );
+                })}
             </SubTitle>
             <SubTitle>
-                <PhoneIcon width="40" height="40"/>
-                <Content>
-                    <ContentTitle>연락처</ContentTitle>
-                    <Text>010-5032-4709</Text>
-                </Content>
-                <EmailIcon width="40" height="40"/>
-                <Content>
-                    <ContentTitle>이메일</ContentTitle>
-                    <Text>tmddus4709@gmail.com</Text>
-                </Content>
-                <SchoolIcon width="40" height="40"/>
-                <Content>
-                    <ContentTitle>학력</ContentTitle>
-                    <Text>한경대학교</Text>
-                </Content>
+                {title1.map((value,index) => {
+                        return(
+                            <>
+                                <ShowIcon Index={index+3} />
+                                    <Content>
+                                        <div><BIGSPAN>{value}</BIGSPAN></div>
+                                        <div>{content1[index]}</div>
+                                    </Content>
+                            </>
+                        );
+                })}
             </SubTitle>
             
         </About>

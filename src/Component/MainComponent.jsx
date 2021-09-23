@@ -71,7 +71,6 @@ const IntDiv = styled.div`
 `;
 const MainComponent = ({setScrollY}) => {
   const goNavi = (title) => {
-    console.log(title)
     switch(title) {
       case "main":
         window.scrollTo({top:0, left:0, behavior:'smooth'});
