@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import '../App.css';
 const Main = styled.div`
   height:600px;
   background-image: url("images.jpg");
@@ -9,16 +9,18 @@ const Main = styled.div`
 `;
 
 const Header = styled.div`
-  height:92px;
+  display: flex;
   position:fixed;
   width:100%;
   z-index:5;
+  padding: 2rem 0;
+  @media only screen and (max-width: 837px) {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+  }
 `;
-const Navi = styled.div`
-  display:flex;
-  height: 100%;
-  align-items:center;
-`;
+
 const Portfolio = styled.div`
   width: 50%;
   color: white;
@@ -28,12 +30,24 @@ const Portfolio = styled.div`
   font-family: serif;
   font-weight: bold;
   cursor: pointer;
+  @media only screen and (max-width: 837px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    left: 0;
   
+  }
 `;
 const Menu = styled.div`
-  width: 50%;
+  width: 100%;
   display:flex;
   justify-content: space-evenly;
+  @media only screen and (max-width: 837px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
 `;
 
 const Span = styled.span`
@@ -53,21 +67,33 @@ const Content = styled.div`
  height: 90%;
  font-family: fantasy;
  font-weight: bold;
+ @media only screen and (max-width: 837px) {
+    padding: 5em;
+  }
 `;
 const Title = styled.div`
   font-size:50px;
   color: white;
+  @media only screen and (max-width: 837px) {
+    font-size:  1.5em;
+    
+  }
 `;
 const Introduction = styled.div`
   padding-top: 70px;
   color: white;
   font-size: 25px;
   align-items: center;
+  
 `;
 const IntDiv = styled.div`
   display: flex;
   justify-content: center;
   font-size:20px;
+  @media only screen and (max-width: 837px) {
+    font-size:  0.6em;
+    
+  }
 `;
 const MainComponent = ({setScrollY}) => {
   const goNavi = (title) => {
@@ -99,15 +125,13 @@ const MainComponent = ({setScrollY}) => {
   return(
         <Main id="Main">
             <Header id="header">
-              <Navi>
-                  <Portfolio onClick={() => goNavi("main")}>BBoo's Portfolio</Portfolio>
-                  <Menu>
-                    <Span onClick={() => goNavi("about")}>about me</Span>
-                    <Span onClick={() => goNavi("skills")}>skills</Span>
-                    <Span onClick={() => goNavi("projects")}>project</Span>
-                    <Span onClick={() => goNavi("archiving")}>archiving</Span>
-                  </Menu>
-              </Navi>
+                <Portfolio onClick={() => goNavi("main")}>BBoo's Portfolio</Portfolio>
+                <Menu>
+                  <Span onClick={() => goNavi("about")}>about me</Span>
+                  <Span onClick={() => goNavi("skills")}>skills</Span>
+                  <Span onClick={() => goNavi("projects")}>project</Span>
+                  <Span onClick={() => goNavi("archiving")}>archiving</Span>
+                </Menu>
             </Header>
             <Content>
               <Title> ㅡ 최승연 ㅡ </Title>

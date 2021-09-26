@@ -4,24 +4,32 @@ import '../App.css';
 
 const Archive = styled.div`
     background-color: #F5F5F5;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 const MainTitle = styled.div`
-    font-weight: bold;
-    font-size: 35px;
-    text-decoration: underline;
     margin: 5vh;
     position: relative;
     left: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    @media only screen and (max-width : 837px){
+        font-size: 2rem;
+        left: 0;
+    }
 `;
 
 const SubTitle = styled.div`
     display: flex;
-    
+    @media only screen and (max-width : 837px){
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const Content = styled.div`

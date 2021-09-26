@@ -4,20 +4,28 @@ import ShowIcon from "./ShowIcon";
 
 
 const About = styled.div`
-  height:360px;
-  background-color:#F9C51D;
+  background-color:#F5F5F5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width : 837px){
+        margin-bottom: 1em;
+    }
 `;
 
 const MainTitle = styled.div`
-    font-weight: bold;
-    font-size: 35px;
-    text-decoration: underline;
     margin: 5vh;
     position: relative;
     left: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    @media only screen and (max-width : 837px){
+        font-size: 2rem;
+        left: 0;
+    }
 `;
 
 const SubTitle = styled.div`
@@ -26,8 +34,20 @@ const SubTitle = styled.div`
     margin: 20px;
     position: relative;
     left: 100px;
+    @media only screen and (max-width : 837px){
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        
+    }
 `;
-
+const Band = styled.div`
+    display: flex;
+    @media only screen and (max-width : 837px){
+        margin: 1em;
+        padding: 0.3em;
+    }
+`;
 const Content = styled.div`
     width: 200px;
     margin-right: 100px;
@@ -38,6 +58,10 @@ const Content = styled.div`
 const BIGSPAN = styled.span`
   font-weight: 700;
   font-size: 1.25rem;
+  @media only screen and (max-width : 837px){
+        font-size: 1em;
+        
+    }
 `;
 
 
@@ -53,26 +77,26 @@ const AboutComponent = () => {
             <SubTitle>
                 {title.map((value,index) => {
                     return(
-                        <>
+                        <Band>
                             <ShowIcon Index={index} />
                             <Content>
                                 <div><BIGSPAN>{value}</BIGSPAN></div>
                                 <div>{content[index]}</div>
                             </Content>
-                        </>
+                        </Band>
                     );
                 })}
             </SubTitle>
             <SubTitle>
                 {title1.map((value,index) => {
                         return(
-                            <>
+                            <Band>
                                 <ShowIcon Index={index+3} />
                                     <Content>
                                         <div><BIGSPAN>{value}</BIGSPAN></div>
                                         <div>{content1[index]}</div>
                                     </Content>
-                            </>
+                            </Band>
                         );
                 })}
             </SubTitle>

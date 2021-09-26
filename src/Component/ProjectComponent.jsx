@@ -3,20 +3,25 @@ import styled from 'styled-components';
 import SimpleImageSlider from "react-simple-image-slider";
 
 const Project = styled.div`
-    height:1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:violet;
+    background-color:#BDBDBD;
 `;
 
 const MainTitle = styled.div`
-    font-weight: bold;
-    font-size: 35px;
-    text-decoration: underline;
     margin: 5vh;
     position: relative;
     left: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    @media only screen and (max-width : 837px){
+        font-size: 2rem;
+        left: 0;
+    }
 `;
 
 const SubTitle = styled.div`
@@ -40,10 +45,16 @@ const ContentTitle = styled.div`
     padding: 30px;
     font-family: fantasy;
     color: crimson;
+    @media only screen and (max-width : 837px){
+        font-size: 1.5em;
+    }
 `;
 
 const ContentImage = styled.div`
     margin: 20px;
+    @media only screen and (max-width : 837px){
+        width:40%;
+    }
 `;
 
 const Text = styled.div`
@@ -51,24 +62,27 @@ const Text = styled.div`
     flex-direction: column;
     margin-bottom: 15px;
     font-family: snas-serif;
+    @media only screen and (max-width : 837px){
+        width: 60%;
+        margin: 1em;
+    }
 `;
 const TextBox = styled.div`
     display: flex;
     padding: 5px;
 `;
 const TextTitle = styled.div`
-    width: 20vh;
+    width: 150px;
     font-weight: bold;
 `;
 
 const TextDetail = styled.div`
-
+    margin-bottom: 20px;
 `;
 
 const images = [
     { url: "1.JPG" },
-    { url: "2.JPG" },
-    { url: "3.JPG" },
+    { url: "2.JPG" }
   ];
 
 const ProjectComponent = () => {
@@ -81,8 +95,8 @@ const ProjectComponent = () => {
                     <ContentTitle> ㅡ portfolio ㅡ</ContentTitle>
                     <ContentImage>
                         <SimpleImageSlider
-                            width={800}
-                            height={504}
+                            width={400}
+                            height={300}
                             images={images}
                             showNavs= {true}
                             navStyle={2}
@@ -90,22 +104,22 @@ const ProjectComponent = () => {
                         /> 
                     </ContentImage>
                     <Text>
-                        <TextDetail>포트폴리오 용도로 제작한 React로 만든 웹사이트입니다. 프론트엔드 개발 후 배포도 경험해 볼 수 있었던 프로젝트입니다.</TextDetail>
+                        <TextDetail>포트폴리오 용도로 제작한 React로 만든 웹사이트입니다. front-end 개발 후 배포도 경험할 수 있었던 프로젝트입니다.</TextDetail>
                         <TextBox>
                             <TextTitle>주요기능</TextTitle>
-                            <TextDetail>간단한 자기소개, 인적 사항, 보유 기술 스택 및 프로젝트 경험 등을 담고 있습니다.</TextDetail>
+                            <>간단한 자기소개, 인적 사항, 보유 기술 스택 및 프로젝트 경험 등을 담고 있습니다.</>
                         </TextBox>
                         <TextBox>
                             <TextTitle>GitHub</TextTitle>
-                            <TextDetail>https://github.com/Choiseungyeon534/Porfolio_2021</TextDetail>
+                            <>https://github.com/Choiseungyeon534/Porfolio_2021</>
                         </TextBox>
                         <TextBox>
                             <TextTitle>도메인</TextTitle>
-                            <TextDetail>https://BBoo</TextDetail>
+                            <>https://choiseungyeon534.github.io/Porfolio_2021/</>
                         </TextBox>
                         <TextBox>
                             <TextTitle>Front-end</TextTitle>
-                            <TextDetail>React</TextDetail>
+                            <>React</>
                         </TextBox>
                     </Text>
                 </Content>

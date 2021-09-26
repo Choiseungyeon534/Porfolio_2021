@@ -7,8 +7,8 @@ import ProjectComponent from './Component/ProjectComponent';
 import ArchivingComponent from './Component/ArchivingComponent';
 
 const Background = styled.div`
-  background-color:black;
-  height:3700px;
+  background-color:#F5F5F5;
+  overflow-x:hidden;
 `;
 
 const Footer = styled.div`
@@ -20,7 +20,6 @@ const Footer = styled.div`
   justify-content:center;
   align-items: center;
 `;
-
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -37,7 +36,7 @@ const App = () => {
     watchScroll();
 
     if(scrollY > 0) {
-      document.getElementById("header").style.background = 'black';
+      document.getElementById("header").style.background = '#2e2b2ba3';
       document.getElementById("header").style.boxShadow= '0 0 30px #f3f1f1';
     } else {
       document.getElementById("header").style.background = 'none';
@@ -48,7 +47,7 @@ const App = () => {
       window.removeEventListener("scroll", logit);
     };
   });
-  console.log(scrollY)
+  
   return(
     
     <Background>

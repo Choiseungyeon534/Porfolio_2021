@@ -2,22 +2,33 @@ import React from "react";
 import styled from "styled-components";
 
 const Skill = styled.div`
-    height:1200px;
-    background-color:cyan;
+    background-color:#D5D5D5;
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 const MainTitle = styled.div`
-    font-weight: bold;
-    font-size: 35px;
-    text-decoration: underline;
     margin: 5vh;
+    position: relative;
+    left: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    @media only screen and (max-width : 837px){
+        font-size: 2rem;
+        left: 0;
+    }
 `;
 
 const SubTitle = styled.div`
     display: flex;
+    @media only screen and (max-width : 837px){
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const Content = styled.div`
@@ -45,6 +56,9 @@ const Text = styled.div`
     padding: 30px;
     font-family: fantasy;
     color: crimson;
+    @media only screen and (max-width : 837px){
+        font-size: 1.5em;
+    }
 `;
 
 const SkillComponent = () => {
@@ -56,40 +70,34 @@ const SkillComponent = () => {
                 <Content>
                     <Contentmini>
                         <Text>Back-end</Text>
-                        <img alt="spring" height="100px" width="200px" src="spring.png" style={{marginBottom:30}}></img>
-                        <img alt="nodejs" height="100px" width="300px" src="nodejs.png" style={{marginBottom:30}}></img>
+                        <img alt="spring" height="320px" width="200px" src="back.png" style={{marginBottom:5}}></img>
                     </Contentmini>
                     <Contentmini>
                         <Text>Version Control</Text>
                         <img alt="git" height="200px" width ="200px" src="git.png" style={{marginBottom:30}}></img>
-                        <img alt="github" height="150px" width ="250px" src="github.png" style={{marginBottom:30}}></img>
+                        <img alt="github" height="150px" width ="250px" src="github.png"></img>
                     </Contentmini>
                 </Content>
                 <Content>
 
                     <Contentmini>
                         <Text>Front-end</Text>
-                        <img alt="html" height="150px" width ="300px" src="html.png" style={{marginBottom:30}}></img>
-                        <img alt="sass" height="200px" width ="250px" src="sass.png" style={{marginBottom:30}}></img>
-                        <img alt="react" height="150px" width ="280px" src="react.png" style={{marginBottom:30}}></img>
-                        <img alt="jquery" height="215px" width ="250px" src="jquery.png" style={{marginBottom:30}}></img>
+                        <img alt="html" height="150px" width ="300px" src="html.png" style={{marginBottom:40}}></img>
+                        <img alt="sass" height="200px" width ="250px" src="sass.png" style={{marginBottom:40}}></img>
+                        <img alt="react" height="150px" width ="280px" src="react.png" style={{marginBottom:40}}></img>
+                        <img alt="jquery" height="215px" width ="250px" src="jquery.png" style={{marginBottom:35}}></img>
                     </Contentmini>
                 </Content>
                 <Content>
                     <Contentmini>
                         <Text>Database</Text>
-                        <img alt="oracle" height="150px" width ="150px" src="oracle.png" ></img>
-                        <img alt="mysql" height="150px" width ="150px" src="mysql.png" ></img>
-                        <img alt="mongo" height="100px" width ="150px" src="mongo db.png" style={{marginBottom:10}}></img>
+                        <img alt="mongo" height="350px" width ="200px" src="database.JPG" style={{marginBottom:5}}></img>
                     </Contentmini>
                     <Contentmini>
                         <Text>Certificate</Text>
-                        <img alt="qnet" height="70px" width ="250px" src="qnet.JPG" style={{marginBottom:20}}></img>
-                        <img alt="adsp" height="70px" width ="150px" src="adsp.JPG" style={{marginBottom:20}}></img>
-                        <img alt="sqld" height="70px" width ="150px" src="sqld.JPG" style={{marginBottom:10}}></img>
+                        <img alt="qnet" height="350px" width ="200px" src="certificate.png"></img>
                     </Contentmini>
                 </Content>
-                
             </SubTitle>
         </Skill>
     );
